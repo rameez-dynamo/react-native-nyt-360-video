@@ -1,0 +1,17 @@
+{
+  "name": "react-native-nyt-360-video",
+  "version": "1.0.0",
+  "description": "A React Native wrapper for the NYT 360 Video package for iOS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam Denny",
+  "license": "ISC",
+  "devDependencies": {
+    "react-native": "^0.51.0"
+  },
+  "peerDependencies": {
+    "react-native": "^0.51.0"
+  }
+}
