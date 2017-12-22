@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		66CDD7801FEB2860005A70E8 /* RNnyt360Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CDD77F1FEB2860005A70E8 /* RNnyt360Video.m */; };
 		66CDD7811FEB2860005A70E8 /* RNnyt360Video.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66CDD77E1FEB2860005A70E8 /* RNnyt360Video.h */; };
+		66CDD7F91FEC5821005A70E8 /* RNnyt360VideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CDD7F21FEC5820005A70E8 /* RNnyt360VideoManager.m */; };
+		66CDD7FA1FEC5821005A70E8 /* RNnyt360VideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CDD7F41FEC5820005A70E8 /* RNnyt360VideoPlayerViewController.m */; };
+		66CDD7FB1FEC5821005A70E8 /* UIView+FindUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CDD7F61FEC5821005A70E8 /* UIView+FindUIViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,9 +28,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		666819A01FEC60BF00D12C72 /* NYT360Video */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NYT360Video; sourceTree = "<group>"; };
 		66CDD77B1FEB2860005A70E8 /* libRNnyt360Video.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNnyt360Video.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CDD77E1FEB2860005A70E8 /* RNnyt360Video.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNnyt360Video.h; sourceTree = "<group>"; };
 		66CDD77F1FEB2860005A70E8 /* RNnyt360Video.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNnyt360Video.m; sourceTree = "<group>"; };
+		66CDD7F21FEC5820005A70E8 /* RNnyt360VideoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNnyt360VideoManager.m; sourceTree = "<group>"; };
+		66CDD7F31FEC5820005A70E8 /* RNnyt360VideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNnyt360VideoPlayerViewController.h; sourceTree = "<group>"; };
+		66CDD7F41FEC5820005A70E8 /* RNnyt360VideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNnyt360VideoPlayerViewController.m; sourceTree = "<group>"; };
+		66CDD7F51FEC5820005A70E8 /* RNnyt360VideoPlayerViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNnyt360VideoPlayerViewControllerDelegate.h; sourceTree = "<group>"; };
+		66CDD7F61FEC5821005A70E8 /* UIView+FindUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FindUIViewController.m"; sourceTree = "<group>"; };
+		66CDD7F71FEC5821005A70E8 /* RNnyt360VideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNnyt360VideoManager.h; sourceTree = "<group>"; };
+		66CDD7F81FEC5821005A70E8 /* UIView+FindUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FindUIViewController.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +71,14 @@
 		66CDD77D1FEB2860005A70E8 /* RNnyt360Video */ = {
 			isa = PBXGroup;
 			children = (
+				666819A01FEC60BF00D12C72 /* NYT360Video */,
+				66CDD7F71FEC5821005A70E8 /* RNnyt360VideoManager.h */,
+				66CDD7F21FEC5820005A70E8 /* RNnyt360VideoManager.m */,
+				66CDD7F31FEC5820005A70E8 /* RNnyt360VideoPlayerViewController.h */,
+				66CDD7F41FEC5820005A70E8 /* RNnyt360VideoPlayerViewController.m */,
+				66CDD7F51FEC5820005A70E8 /* RNnyt360VideoPlayerViewControllerDelegate.h */,
+				66CDD7F81FEC5821005A70E8 /* UIView+FindUIViewController.h */,
+				66CDD7F61FEC5821005A70E8 /* UIView+FindUIViewController.m */,
 				66CDD77E1FEB2860005A70E8 /* RNnyt360Video.h */,
 				66CDD77F1FEB2860005A70E8 /* RNnyt360Video.m */,
 			);
@@ -123,7 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66CDD7FA1FEC5821005A70E8 /* RNnyt360VideoPlayerViewController.m in Sources */,
 				66CDD7801FEB2860005A70E8 /* RNnyt360Video.m in Sources */,
+				66CDD7FB1FEC5821005A70E8 /* UIView+FindUIViewController.m in Sources */,
+				66CDD7F91FEC5821005A70E8 /* RNnyt360VideoManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +181,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -178,7 +201,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -214,7 +237,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -227,7 +251,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -243,6 +267,8 @@
 					"$(inherited)",
 					"$(SRCROOT)/node_modules/react-native/React",
 					"$(SRCROOT)/../react-native/React",
+					"${PODS_ROOT}/Headers/Private/NYT360Video/**",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -260,6 +286,8 @@
 					"$(inherited)",
 					"$(SRCROOT)/node_modules/react-native/React",
 					"$(SRCROOT)/../react-native/React",
+					"${PODS_ROOT}/Headers/Private/NYT360Video/**",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

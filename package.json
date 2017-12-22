@@ -1,17 +1,81 @@
 {
-  "name": "react-native-nyt-360-video",
-  "version": "1.0.0",
-  "description": "A React Native wrapper for the NYT 360 Video package for iOS",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_args": [
+    [
+      {
+        "raw": "react-native-nyt-360-video",
+        "scope": null,
+        "escapedName": "react-native-nyt-360-video",
+        "name": "react-native-nyt-360-video",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/adam/RNBrandlive"
+    ]
+  ],
+  "_from": "react-native-nyt-360-video@latest",
+  "_id": "react-native-nyt-360-video@1.0.0",
+  "_inCache": true,
+  "_location": "/react-native-nyt-360-video",
+  "_nodeVersion": "6.10.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/react-native-nyt-360-video-1.0.0.tgz_1513813087466_0.08615896827541292"
   },
-  "author": "Adam Denny",
-  "license": "ISC",
+  "_npmUser": {
+    "name": "adam-denny",
+    "email": "adam@yourbrandlive.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-nyt-360-video",
+    "scope": null,
+    "escapedName": "react-native-nyt-360-video",
+    "name": "react-native-nyt-360-video",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-nyt-360-video/-/react-native-nyt-360-video-1.0.0.tgz",
+  "_shasum": "0711810f26ecabff338906fce7801afb543037d7",
+  "_shrinkwrap": null,
+  "_spec": "react-native-nyt-360-video",
+  "_where": "/Users/adam/RNBrandlive",
+  "author": {
+    "name": "Adam Denny"
+  },
+  "dependencies": {},
+  "description": "A React Native wrapper for the NYT 360 Video package for iOS",
   "devDependencies": {
     "react-native": "^0.51.0"
   },
+  "directories": {},
+  "dist": {
+    "shasum": "0711810f26ecabff338906fce7801afb543037d7",
+    "tarball": "https://registry.npmjs.org/react-native-nyt-360-video/-/react-native-nyt-360-video-1.0.0.tgz"
+  },
+  "gitHead": "c95883f400df1034bf71ce5866ee4b767d6a9c7a",
+  "license": "ISC",
+  "main": "Nyt360Video.js",
+  "maintainers": [
+    {
+      "name": "adam-denny",
+      "email": "adam@yourbrandlive.com"
+    }
+  ],
+  "name": "react-native-nyt-360-video",
+  "optionalDependencies": {},
   "peerDependencies": {
     "react-native": "^0.51.0"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
 }
