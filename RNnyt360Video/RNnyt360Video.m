@@ -1,10 +1,9 @@
-#import <React/RCTConvert.h>
 #import "RNnyt360Video.h"
+#import <React/RCTConvert.h>
 #import <React/RCTBridgeModule.h>
 #import <React/RCTEventDispatcher.h>
 #import <React/UIView+React.h>
-#import "NYT360Video/NYT360ViewController.h"
-#import "NYT360Video/NYT360MotionManager.h"
+#import "NYT360Video.h"
 
 static NSString *const statusKeyPath = @"status";
 static NSString *const playbackLikelyToKeepUpKeyPath = @"playbackLikelyToKeepUp";
@@ -271,6 +270,16 @@ static NSString *const timedMetadata = @"timedMetadata";
   }
 
   _player = [AVPlayer playerWithPlayerItem:_playerItem];
+    
+    id<NYT360MotionManagement> const manager = [NYT360MotionManager sharedManager];
+    nyt360VC = [[NYT360ViewController alloc] initWithAVPlayer:_player motionManager:manager];
+    
+    // [self setResizeMode:_resizeMode];
+    // nyt360VC.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    nyt360VC.view.frame = self.bounds;
+    nyt360VC.view.contentScaleFactor = 1.2;
+    nyt360VC.view.autoresizesSubviews = YES;
+    
   _player.actionAtItemEnd = AVPlayerActionAtItemEndNone;
 
   [_player addObserver:self forKeyPath:playbackRate options:0 context:nil];
@@ -512,7 +521,8 @@ static NSString *const timedMetadata = @"timedMetadata";
 - (void)setPaused:(BOOL)paused
 {
   if (paused) {
-    [_player pause];
+    //[_player pause];
+    [nyt360VC pause];
     [_player setRate:0.0];
   } else {
     if([_ignoreSilentSwitch isEqualToString:@"ignore"]) {
@@ -520,11 +530,23 @@ static NSString *const timedMetadata = @"timedMetadata";
     } else if([_ignoreSilentSwitch isEqualToString:@"obey"]) {
       [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:nil];
     }
-    [_player play];
+    //[_player play];
+    [nyt360VC play];
     [_player setRate:_rate];
+      
   }
 
   _paused = paused;
+}
+
+- (void)rotateTo:(CGPoint)point {
+    @try {
+        [nyt360VC rotateTo:point];
+    } @catch(NSException *e) {
+        NSLog(@"Could not update rotation: %@", e);
+    } @finally {
+        
+    }
 }
 
 - (float)getCurrentTime
@@ -670,14 +692,6 @@ static NSString *const timedMetadata = @"timedMetadata";
         // to prevent video from being animated when resizeMode is 'cover'
         // resize mode must be set before subview is added
         
-        id<NYT360MotionManagement> const manager = [NYT360MotionManager sharedManager];
-        nyt360VC = [[NYT360ViewController alloc] initWithAVPlayer:_player motionManager:manager];
-        
-       // [self setResizeMode:_resizeMode];
-       // nyt360VC.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        nyt360VC.view.frame = self.bounds;
-        nyt360VC.view.contentScaleFactor = 1.2;
-        nyt360VC.view.autoresizesSubviews = YES;
         [self addSubview:nyt360VC.view];
         [nyt360VC didMoveToParentViewController:_playerViewController];
     }
@@ -823,6 +837,8 @@ static NSString *const timedMetadata = @"timedMetadata";
     _playbackRateObserverRegistered = NO;
   }
   _player = nil;
+    
+    nyt360VC = nil;
 
   [self removePlayerLayer];
 

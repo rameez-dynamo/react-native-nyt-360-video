@@ -104,6 +104,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)reorientVerticalCameraAngleToHorizon:(BOOL)animated;
 
+/**
+ * Rotates camera manually to a point
+ *
+ * Needed in React Native if we want to handle pan with a React element
+ */
+- (void)rotateTo:(CGPoint)point;
+
 #pragma mark - Panning Options
 
 /**

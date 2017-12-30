@@ -1,17 +1,25 @@
-#import "RNnyt360VideoManager.h"
+#import "RNNyt360VideoManager.h"
 #import "RNnyt360Video.h"
 #import <React/RCTBridge.h>
 #import <AVFoundation/AVFoundation.h>
 
-@implementation RNnyt360VideoManager
-
-RCT_EXPORT_MODULE();
+@implementation RNNyt360VideoManager {
+    RNnyt360Video *video;
+}
 
 @synthesize bridge = _bridge;
 
+RCT_EXPORT_MODULE();
+
 - (UIView *)view
 {
-  return [[RNnyt360Video alloc] initWithEventDispatcher:self.bridge.eventDispatcher];
+  video = [[RNnyt360Video alloc] initWithEventDispatcher:self.bridge.eventDispatcher];
+  return video;
+}
+
+RCT_EXPORT_METHOD(rotateTo:(float)x y:(float)y){
+    CGPoint point = CGPointMake(x, y);
+    [video rotateTo:point];
 }
 
 - (dispatch_queue_t)methodQueue

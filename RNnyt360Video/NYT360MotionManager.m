@@ -86,6 +86,7 @@ static const NSTimeInterval NYT360MotionManagerPreferredMotionUpdateInterval = (
 }
 
 - (NSUUID *)startUpdating:(NSTimeInterval)preferredUpdateInterval {
+    NSLog(@"motionManager, startUpdating");
     NSAssert([NSOperationQueue currentQueue] == [NSOperationQueue mainQueue], @"NYT360MotionManager may only be used on the main queue.");
     NSUInteger previousCount = self.observerItems.count;
     NYT360MotionManagerObserverItem *item = [[NYT360MotionManagerObserverItem alloc] initWithPreferredUpdateInterval:preferredUpdateInterval];
@@ -98,6 +99,7 @@ static const NSTimeInterval NYT360MotionManagerPreferredMotionUpdateInterval = (
 }
 
 - (void)stopUpdating:(NSUUID *)token {
+    NSLog(@"motionManager, stopUpdating");
     NSAssert([NSOperationQueue currentQueue] == [NSOperationQueue mainQueue], @"NYT360MotionManager may only be used on the main queue.");
     NSParameterAssert(token);
     NSUInteger previousCount = self.observerItems.count;

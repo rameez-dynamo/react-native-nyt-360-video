@@ -199,4 +199,12 @@ CGRect NYT360ViewControllerSceneBoundsForScreenBounds(CGRect screenBounds) {
     [self.delegate videoViewController:self userInitallyMovedCameraViaMethod:method];
 }
 
+- (void)rotateTo:(CGPoint)point {
+    [self.cameraController rotateTo:point];
+}
+
+- (void)printSomething:(float)number {
+    NSLog(@"printing %l", number);
+}
+
 @end

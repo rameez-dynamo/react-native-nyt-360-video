@@ -36,6 +36,10 @@ export default class Nyt360Video extends Component {
     this.setNativeProps({ fullscreen: false });
   };
 
+  rotateTo = (x, y) => {
+    NativeModules.RNNyt360VideoManager.rotateTo(Number(x), Number(y));
+  }
+
   _assignRoot = (component) => {
     this._root = component;
   };
@@ -170,13 +174,13 @@ export default class Nyt360Video extends Component {
 
     let nativeResizeMode;
     if (resizeMode === VideoResizeMode.stretch) {
-      nativeResizeMode = NativeModules.UIManager.RNnyt360Video.Constants.ScaleToFill;
+      nativeResizeMode = NativeModules.UIManager.RNNyt360Video.Constants.ScaleToFill;
     } else if (resizeMode === VideoResizeMode.contain) {
-      nativeResizeMode = NativeModules.UIManager.RNnyt360Video.Constants.ScaleAspectFit;
+      nativeResizeMode = NativeModules.UIManager.RNNyt360Video.Constants.ScaleAspectFit;
     } else if (resizeMode === VideoResizeMode.cover) {
-      nativeResizeMode = NativeModules.UIManager.RNnyt360Video.Constants.ScaleAspectFill;
+      nativeResizeMode = NativeModules.UIManager.RNNyt360Video.Constants.ScaleAspectFill;
     } else {
-      nativeResizeMode = NativeModules.UIManager.RNnyt360Video.Constants.ScaleNone;
+      nativeResizeMode = NativeModules.UIManager.RNNyt360Video.Constants.ScaleNone;
     }
 
     const nativeProps = Object.assign({}, this.props);
@@ -311,7 +315,7 @@ Nyt360Video.propTypes = {
   ...View.propTypes,
 };
 
-const RNnyt360Video = requireNativeComponent('RNnyt360Video', Nyt360Video, {
+const RNnyt360Video = requireNativeComponent('RNNyt360Video', Nyt360Video, {
   nativeOnly: {
     src: true,
     seek: true,

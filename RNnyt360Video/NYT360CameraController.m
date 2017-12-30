@@ -207,6 +207,19 @@ static inline CGPoint subtractPoints(CGPoint a, CGPoint b) {
     }
 }
 
+- (void)rotateTo:(CGPoint)point {
+    self.rotateCurrent = point;
+    self.rotateDelta = subtractPoints(self.rotateStart, self.rotateCurrent);
+    self.rotateStart = self.rotateCurrent;
+    NYT360EulerAngleCalculationResult result = NYT360PanGestureChangeCalculation(self.currentPosition, self.rotateDelta, self.view.bounds.size, self.allowedPanGesturePanningAxes);
+    self.currentPosition = result.position;
+    self.pointOfView.eulerAngles = result.eulerAngles;
+    if (self.compassAngleUpdateBlock) {
+        self.compassAngleUpdateBlock(self.compassAngle);
+    }
+    [self reportInitialCameraMovementIfNeededViaMethod:NYT360UserInteractionMethodTouch];
+}
+
 - (void)reportInitialCameraMovementIfNeededViaMethod:(NYT360UserInteractionMethod)method {
     // only fire once per video:
     if (!self.hasReportedInitialCameraMovement) {

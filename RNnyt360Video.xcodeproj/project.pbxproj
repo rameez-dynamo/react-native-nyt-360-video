@@ -7,9 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66181EB71FF6FDC200296477 /* RNNyt360VideoManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 66681A3A1FF6E8C900D12C72 /* RNNyt360VideoManager.h */; };
+		66181EB81FF6FDC200296477 /* RNnyt360VideoPlayerViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 66CDD7F31FEC5820005A70E8 /* RNnyt360VideoPlayerViewController.h */; };
+		66181EB91FF6FDC200296477 /* RNnyt360VideoPlayerViewControllerDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 66CDD7F51FEC5820005A70E8 /* RNnyt360VideoPlayerViewControllerDelegate.h */; };
+		66181EBA1FF6FDC200296477 /* UIView+FindUIViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 66CDD7F81FEC5821005A70E8 /* UIView+FindUIViewController.h */; };
+		66181EBB1FF6FDC200296477 /* RNnyt360Video.h in Sources */ = {isa = PBXBuildFile; fileRef = 66CDD77E1FEB2860005A70E8 /* RNnyt360Video.h */; };
+		66181EE91FF7020F00296477 /* NYT360CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66181EDA1FF7020B00296477 /* NYT360CameraController.m */; };
+		66181EEA1FF7020F00296477 /* NYT360MotionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 66181EDB1FF7020B00296477 /* NYT360MotionManager.m */; };
+		66181EEB1FF7020F00296477 /* NYT360PlayerScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 66181EDD1FF7020C00296477 /* NYT360PlayerScene.m */; };
+		66181EEC1FF7020F00296477 /* NYT360EulerAngleCalculations.m in Sources */ = {isa = PBXBuildFile; fileRef = 66181EE01FF7020D00296477 /* NYT360EulerAngleCalculations.m */; };
+		66181EED1FF7020F00296477 /* NYT360CameraPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 66181EE51FF7020E00296477 /* NYT360CameraPanGestureRecognizer.m */; };
+		66181EEE1FF7020F00296477 /* NYT360ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66181EE61FF7020E00296477 /* NYT360ViewController.m */; };
+		66681A3B1FF6E8C900D12C72 /* RNNyt360VideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 66681A391FF6E8C800D12C72 /* RNNyt360VideoManager.m */; };
 		66CDD7801FEB2860005A70E8 /* RNnyt360Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CDD77F1FEB2860005A70E8 /* RNnyt360Video.m */; };
 		66CDD7811FEB2860005A70E8 /* RNnyt360Video.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66CDD77E1FEB2860005A70E8 /* RNnyt360Video.h */; };
-		66CDD7F91FEC5821005A70E8 /* RNnyt360VideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CDD7F21FEC5820005A70E8 /* RNnyt360VideoManager.m */; };
 		66CDD7FA1FEC5821005A70E8 /* RNnyt360VideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CDD7F41FEC5820005A70E8 /* RNnyt360VideoPlayerViewController.m */; };
 		66CDD7FB1FEC5821005A70E8 /* UIView+FindUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CDD7F61FEC5821005A70E8 /* UIView+FindUIViewController.m */; };
 /* End PBXBuildFile section */
@@ -28,16 +39,31 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		66181EDA1FF7020B00296477 /* NYT360CameraController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYT360CameraController.m; sourceTree = "<group>"; };
+		66181EDB1FF7020B00296477 /* NYT360MotionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYT360MotionManager.m; sourceTree = "<group>"; };
+		66181EDC1FF7020B00296477 /* NYT360CameraController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYT360CameraController.h; sourceTree = "<group>"; };
+		66181EDD1FF7020C00296477 /* NYT360PlayerScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYT360PlayerScene.m; sourceTree = "<group>"; };
+		66181EDE1FF7020C00296477 /* NYT360DataTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYT360DataTypes.h; sourceTree = "<group>"; };
+		66181EDF1FF7020C00296477 /* NYT360MotionManagement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYT360MotionManagement.h; sourceTree = "<group>"; };
+		66181EE01FF7020D00296477 /* NYT360EulerAngleCalculations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYT360EulerAngleCalculations.m; sourceTree = "<group>"; };
+		66181EE11FF7020D00296477 /* NYT360Video.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYT360Video.h; sourceTree = "<group>"; };
+		66181EE21FF7020D00296477 /* NYT360MotionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYT360MotionManager.h; sourceTree = "<group>"; };
+		66181EE31FF7020D00296477 /* NYT360EulerAngleCalculations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYT360EulerAngleCalculations.h; sourceTree = "<group>"; };
+		66181EE41FF7020E00296477 /* NYT360PlayerScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYT360PlayerScene.h; sourceTree = "<group>"; };
+		66181EE51FF7020E00296477 /* NYT360CameraPanGestureRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYT360CameraPanGestureRecognizer.m; sourceTree = "<group>"; };
+		66181EE61FF7020E00296477 /* NYT360ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYT360ViewController.m; sourceTree = "<group>"; };
+		66181EE71FF7020E00296477 /* NYT360CameraPanGestureRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYT360CameraPanGestureRecognizer.h; sourceTree = "<group>"; };
+		66181EE81FF7020F00296477 /* NYT360ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYT360ViewController.h; sourceTree = "<group>"; };
 		666819A01FEC60BF00D12C72 /* NYT360Video */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NYT360Video; sourceTree = "<group>"; };
+		66681A391FF6E8C800D12C72 /* RNNyt360VideoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNNyt360VideoManager.m; sourceTree = "<group>"; };
+		66681A3A1FF6E8C900D12C72 /* RNNyt360VideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNNyt360VideoManager.h; sourceTree = "<group>"; };
 		66CDD77B1FEB2860005A70E8 /* libRNnyt360Video.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNnyt360Video.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CDD77E1FEB2860005A70E8 /* RNnyt360Video.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNnyt360Video.h; sourceTree = "<group>"; };
 		66CDD77F1FEB2860005A70E8 /* RNnyt360Video.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNnyt360Video.m; sourceTree = "<group>"; };
-		66CDD7F21FEC5820005A70E8 /* RNnyt360VideoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNnyt360VideoManager.m; sourceTree = "<group>"; };
 		66CDD7F31FEC5820005A70E8 /* RNnyt360VideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNnyt360VideoPlayerViewController.h; sourceTree = "<group>"; };
 		66CDD7F41FEC5820005A70E8 /* RNnyt360VideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNnyt360VideoPlayerViewController.m; sourceTree = "<group>"; };
 		66CDD7F51FEC5820005A70E8 /* RNnyt360VideoPlayerViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNnyt360VideoPlayerViewControllerDelegate.h; sourceTree = "<group>"; };
 		66CDD7F61FEC5821005A70E8 /* UIView+FindUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FindUIViewController.m"; sourceTree = "<group>"; };
-		66CDD7F71FEC5821005A70E8 /* RNnyt360VideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNnyt360VideoManager.h; sourceTree = "<group>"; };
 		66CDD7F81FEC5821005A70E8 /* UIView+FindUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FindUIViewController.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,9 +97,24 @@
 		66CDD77D1FEB2860005A70E8 /* RNnyt360Video */ = {
 			isa = PBXGroup;
 			children = (
+				66681A3A1FF6E8C900D12C72 /* RNNyt360VideoManager.h */,
+				66681A391FF6E8C800D12C72 /* RNNyt360VideoManager.m */,
+				66181EDC1FF7020B00296477 /* NYT360CameraController.h */,
+				66181EDA1FF7020B00296477 /* NYT360CameraController.m */,
+				66181EE71FF7020E00296477 /* NYT360CameraPanGestureRecognizer.h */,
+				66181EE51FF7020E00296477 /* NYT360CameraPanGestureRecognizer.m */,
+				66181EDE1FF7020C00296477 /* NYT360DataTypes.h */,
+				66181EE31FF7020D00296477 /* NYT360EulerAngleCalculations.h */,
+				66181EE01FF7020D00296477 /* NYT360EulerAngleCalculations.m */,
+				66181EDF1FF7020C00296477 /* NYT360MotionManagement.h */,
+				66181EE21FF7020D00296477 /* NYT360MotionManager.h */,
+				66181EDB1FF7020B00296477 /* NYT360MotionManager.m */,
+				66181EE41FF7020E00296477 /* NYT360PlayerScene.h */,
+				66181EDD1FF7020C00296477 /* NYT360PlayerScene.m */,
+				66181EE11FF7020D00296477 /* NYT360Video.h */,
+				66181EE81FF7020F00296477 /* NYT360ViewController.h */,
+				66181EE61FF7020E00296477 /* NYT360ViewController.m */,
 				666819A01FEC60BF00D12C72 /* NYT360Video */,
-				66CDD7F71FEC5821005A70E8 /* RNnyt360VideoManager.h */,
-				66CDD7F21FEC5820005A70E8 /* RNnyt360VideoManager.m */,
 				66CDD7F31FEC5820005A70E8 /* RNnyt360VideoPlayerViewController.h */,
 				66CDD7F41FEC5820005A70E8 /* RNnyt360VideoPlayerViewController.m */,
 				66CDD7F51FEC5820005A70E8 /* RNnyt360VideoPlayerViewControllerDelegate.h */,
@@ -142,10 +183,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66181EE91FF7020F00296477 /* NYT360CameraController.m in Sources */,
+				66181EEA1FF7020F00296477 /* NYT360MotionManager.m in Sources */,
+				66181EED1FF7020F00296477 /* NYT360CameraPanGestureRecognizer.m in Sources */,
+				66181EEE1FF7020F00296477 /* NYT360ViewController.m in Sources */,
+				66181EB71FF6FDC200296477 /* RNNyt360VideoManager.h in Sources */,
+				66181EB81FF6FDC200296477 /* RNnyt360VideoPlayerViewController.h in Sources */,
+				66181EB91FF6FDC200296477 /* RNnyt360VideoPlayerViewControllerDelegate.h in Sources */,
+				66181EEB1FF7020F00296477 /* NYT360PlayerScene.m in Sources */,
+				66181EBA1FF6FDC200296477 /* UIView+FindUIViewController.h in Sources */,
+				66181EEC1FF7020F00296477 /* NYT360EulerAngleCalculations.m in Sources */,
+				66181EBB1FF6FDC200296477 /* RNnyt360Video.h in Sources */,
 				66CDD7FA1FEC5821005A70E8 /* RNnyt360VideoPlayerViewController.m in Sources */,
 				66CDD7801FEB2860005A70E8 /* RNnyt360Video.m in Sources */,
 				66CDD7FB1FEC5821005A70E8 /* UIView+FindUIViewController.m in Sources */,
-				66CDD7F91FEC5821005A70E8 /* RNnyt360VideoManager.m in Sources */,
+				66681A3B1FF6E8C900D12C72 /* RNNyt360VideoManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,8 +319,15 @@
 					"$(inherited)",
 					"$(SRCROOT)/node_modules/react-native/React",
 					"$(SRCROOT)/../react-native/React",
-					"${PODS_ROOT}/Headers/Private/NYT360Video/**",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native-nyt-360-video/**",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(SRCROOT)/node_modules/react-native/React",
+					"$(SRCROOT)/../react-native/React",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native-nyt-360-video/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -286,8 +345,15 @@
 					"$(inherited)",
 					"$(SRCROOT)/node_modules/react-native/React",
 					"$(SRCROOT)/../react-native/React",
-					"${PODS_ROOT}/Headers/Private/NYT360Video/**",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native-nyt-360-video/**",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(SRCROOT)/node_modules/react-native/React",
+					"$(SRCROOT)/../react-native/React",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native-nyt-360-video/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
