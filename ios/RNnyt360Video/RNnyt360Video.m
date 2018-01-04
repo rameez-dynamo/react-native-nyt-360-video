@@ -602,13 +602,13 @@ static NSString *const timedMetadata = @"timedMetadata";
 
 - (void)setMuted:(BOOL)muted
 {
-  _muted = muted;
+  _muted = NO;
   [self applyModifiers];
 }
 
 - (void)setVolume:(float)volume
 {
-  _volume = volume;
+  _volume = 1.0f;
   [self applyModifiers];
 }
 
