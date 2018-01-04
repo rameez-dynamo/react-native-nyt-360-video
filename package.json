@@ -68,6 +68,10 @@
     }
   ],
   "name": "react-native-nyt-360-video",
+  "repository" : { 
+    "type" : "git",
+    "url" : "https://github.com/brandlive1941/react-native-nyt-360-video"
+  },
   "optionalDependencies": {},
   "peerDependencies": {
     "react-native": "^0.51.0"
